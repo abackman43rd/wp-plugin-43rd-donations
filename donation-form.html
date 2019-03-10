@@ -1,0 +1,100 @@
+<form id="donate-form">
+    <fieldset>
+        <legend>Donation Amount</legend>
+        <div class="form-field-container">
+            <div class="donate-or-membership">
+                <input type="radio" id="become-member" name="donate-or-membership" />
+                <label for="become-member">Begin or renew membership</label>
+            </div>
+            <div class="donate-or-membership">
+                <input type="radio" id="just-donate" name="donate-or-membership" />
+                <label for="just-donate">Just make a donation</label>
+            </div>
+        </div>
+        <div class="form-field-container form-membership-only">
+            <select id="donation-level" name="donation-level">
+                <option value="low-income">$10 &mdash; Individual membership (Low Income)</option>
+                <option value="individual" selected>$25 &mdash; Individual membership </option>
+                <option value="couples">$43 &mdash; Couples membership</option>
+            </select>
+        </div>
+        <div class="form-input-container">
+            <label for="additional-amount" class="form-membership-only">Additional donation amount</label>
+            <label for="additional-amount" class="form-donation-only">Donation amount</label>
+            $<input type="number" id="additional-amount" name="additional-amount" value="0" step="1" min="0">
+        </div>
+    </fieldset>
+    <fieldset class="form-membership-only">
+        <legend>
+            <span class="form-individual-only">Member Details</span>
+            <span class="form-family-only">First Member's Details</span>
+        </legend>
+        <div class="form-field-container">
+            <label for="first-member-name">Name</label>
+            <input type="text" id="first-member-name" name="first-member-name" class="long-text-field" value="" required="true">
+        </div>
+        <div class="form-field-container">
+            <label for="first-member-email">Email</label>
+            <input type="email" id="first-member-email" name="first-member-email" class="long-text-field" value="" required="true">
+        </div>
+        <div class="form-field-container">
+            <label for="first-member-phone">Phone #</label>
+            <input type="tel" id="first-member-phone" name="first-member-phone" class="short-text-field" value="" >
+        </div>
+    </fieldset>
+    <fieldset id="second-member-info" class="form-membership-only form-family-only">
+        <legend>Second Member's Details</legend>
+        <div class="form-field-container">
+            <label for="second-member-name">Name</label>
+            <input type="text" id="second-member-name" name="second-member-name" class="long-text-field" value="" required="true">
+        </div>
+        <div class="form-field-container">
+            <label for="second-member-email">Email</label>
+            <input type="email" id="second-member-email" name="second-member-email" class="long-text-field" value="" required="true">
+        </div>
+        <div class="form-field-container">
+            <label for="second-member-phone">Phone #</label>
+            <input type="tel" id="second-member-phone" name="second-member-phone" class="short-text-field" value="">
+        </div>
+    </fieldset>
+    <fieldset id="gift-options">
+        <legend>Thank You Gift Options</legend>
+        <div class="form-field-container">
+            <label for="gift-style">T-shirt design</label>
+            <select id="gift-style" name="gift-style">
+                <option value="logo" selected="">43rd Logo</option>
+                <option value="flag" selected="">American Flag</option>
+            </select>
+        </div>
+        <div class="form-field-container">
+            <label for="gift-size">T-shirt size</label>
+            <select id="gift-size" name="gift-size">
+                <option value="small">Small (S)</option>
+                <option value="medium">Medium (M)</option>
+                <option value="large">Large (L)</option>
+                <option value="x-large">Extra Large (XL)</option>
+                <option value="xx-large">Double Extra Large (2XL)</option>
+                <option value="xxx-large">Triple Extra Large (3XL)</option>
+            </select>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Payment Details</legend>
+        <div class="form-field-container">
+            <label for="card-element">Credit or debit card</label>
+            <div id="card-element" class="form-input-container">
+            <!-- Stripe payment input will be injected here. -->
+            </div>
+            <input type="hidden" id="stripe-token-id" name="stripe-token-id" />
+        </div>
+        <div class="form-field-container">
+            <input type="checkbox" name="is-allowed-to-donate">
+            <label for="is-allowed-to-donate">
+                I am a US citizen, national, or lawful permanent resident, 16 years old or older.
+            </label>
+        </div>
+    </fieldset>
+    <div class="form-action-container">
+        [donate-button]
+    </div>
+</form>

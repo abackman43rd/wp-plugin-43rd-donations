@@ -1,0 +1,87 @@
+#donate-form > fieldset {
+    border: none;
+}
+
+#donation-amount-section,
+#member-info-section,
+#gift-option-section {
+    margin-top: 2rem;
+}
+
+#donate-form > fieldset > legend {
+    font-family: 'nexa';
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+.donate-or-membership {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 1rem;
+}
+
+.donate-or-membership-option {
+    flex: 0 0 auto;
+    padding-right: 2rem;
+}
+
+.form-field-container {
+    margin-bottom: 0.5rem;
+}
+
+.form-field-container > label {
+    display: block;
+    font-size: small;
+}
+
+#member-info-section {
+    clear: both;
+}
+
+.member-info-container {
+    float: left;
+    padding-right: 2rem;
+}
+
+label.checkbox-label {
+    display: inline-block;
+}
+
+.long-text-field {
+    width: 15rem;
+}
+
+.short-text-field {
+    width: 8rem;
+}
+
+.currency-field {
+    width: 5rem;
+}
+
+#card-element {
+    width: 100%;
+    max-width: 20rem;
+    border: 1px solid #ccc;
+}
+
+#donate-button {
+    margin: 0 0.75rem;
+    padding: 0.5rem;
+    border: 3px solid #95c93e;
+    background-color: #119848;
+    color: white;
+    font-family: 'nexa';
+    font-size: large;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#donate-button:active {
+    background-color: #95c93e;
+    color: #119848;
+}
+
+#card-error {
+    color: #761113;
+}
