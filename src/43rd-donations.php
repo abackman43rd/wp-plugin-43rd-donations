@@ -29,11 +29,11 @@ if (!class_exists('FortyThirdDonations')) {
 
         public function enqueue() {
             wp_enqueue_script('donate-button-script',
-                plugins_url('/js/donate_button.js', __FILE__),
+                plugins_url('/app.js', __FILE__),
                 array('jquery'));
             wp_enqueue_script('stripe-elements-script',
                 FortyThirdDonations::$STRIPE_JS_URL);
-            wp_enqueue_style('donate-style', plugins_url('/css/donations.css', __FILE__));
+            wp_enqueue_style('donate-style', plugins_url('/donations.css', __FILE__));
             wp_localize_script('donate-button-script', 'donate_context',
                 array(
                     'ajax_url' => admin_url('admin-ajax.php'),
